@@ -1,9 +1,9 @@
-import Media from "./Media";
+import { Render } from "./examples/FlowLayout";
 
 function App() {
   return (
     <div className="App">
-      <Media />
+      <Render />
     </div>
   );
 }
