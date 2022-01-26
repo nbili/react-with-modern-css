@@ -1,0 +1,40 @@
+.stacking-contexts {
+}
+
+.stacking-contexts > header {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: bisque;
+}
+
+.stacking-contexts .context-wrapper {
+	isolation: isolate;
+	padding-top: 50px;
+}
+
+.stacking-contexts .box1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: deeppink;
+  z-index: 10;
+}
+
+.stacking-contexts .box2 {
+  position: relative;
+  top: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: deepskyblue;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.stacking-contexts .box2 > .box2-1 {
+  padding: 2px;
+  background-color: yellow;
+  z-index: 999;
+}
